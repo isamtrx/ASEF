@@ -1,0 +1,47 @@
+# Secrets & credentials
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+.env
+.env.*
+!.env.example
+*.env.local
+
+# API keys / tokens
+*.token
+*_secret*
+*_credentials*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Reports / artifacts (local only)
+reports/
+coverage/
+*.lcov
+junit.xml
