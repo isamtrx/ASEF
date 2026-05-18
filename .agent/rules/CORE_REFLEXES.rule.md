@@ -1,4 +1,4 @@
-# CORE_REFLEXES.md — ASEF Core Reflexes
+# CORE_REFLEXES.rule.md — ASEF Core Reflexes
 
 > Réflexes automatiques. S'appliquent sans délibération.  
 > Un réflexe non déclaré ici n'est pas un réflexe — c'est une improvisation.  
@@ -36,7 +36,7 @@
 ## REFLEX-004 — Rôle check avant écriture
 
 **Déclencheur :** Toute écriture de fichier  
-**Action :** Vérifier `ROLE_BOUNDARIES.md` — ce fichier est-il dans ma liste ?  
+**Action :** Vérifier `ROLE_BOUNDARIES.rule.md` — ce fichier est-il dans ma liste ?  
 **Bloque :** Écriture directe hors liste sans autorisation (D-0004)  
 **Origine :** Incident copilot-instructions.md 2026-05-18
 

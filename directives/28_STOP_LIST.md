@@ -27,7 +27,7 @@ Quelle mauvaise action elle empêche : poursuite sur gate rouge, action destruct
 |-----------|--------|
 | DoD non défini avant une tâche de livrable | Formuler le DoD et le valider avant de continuer |
 | Bootstrap non effectué en début de session | Effectuer le bootstrap, puis vérifier la cohérence des actions déjà faites |
-| Fichier à écrire hors liste ROLE_BOUNDARIES.md | Documenter dans DECISIONS.md, demander autorisation |
+| Fichier à écrire hors liste ROLE_BOUNDARIES.rule.md | Documenter dans DECISIONS.md, demander autorisation |
 | Ambiguïté sur le périmètre d'une tâche | Clarifier avant d'agir, pas après |
 | > 2 erreurs consécutives sur la même approche | Changer d'approche, ne pas itérer à l'aveugle |
 

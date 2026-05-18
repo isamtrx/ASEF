@@ -107,7 +107,7 @@ ASEF/
 │   ├── run-maturity-assessment.md
 │   └── use-copilot-cli-for-patch.md
 ├── evaluations/                 # Grilles d'évaluation [v0.2]
-│   └── mission_scorecard.md     # 20 points — ACCEPTED/PARTIAL/REJECTED
+│   └── MISSION_SCORECARD.md     # 20 points — ACCEPTED/PARTIAL/REJECTED
 ├── domains/                     # Frameworks domaine (héritent de core/) [v0.2]
 │   └── software/
 │       └── ASEF-QA/             # Framework QA — 4 agents, 2 workflows

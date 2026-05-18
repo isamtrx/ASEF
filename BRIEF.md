@@ -13,7 +13,7 @@ Reprise de session et exécution complète P0→P4 du plan d'absorption openkern
 
 ### Ce qui a été fait
 **P0** : HEARTBEAT.md, BRIEF.md, WORKFLOW_TRIGGER_INDEX.md ✅  
-**P1** : `.agent/rules/` × 6 (identity, soul, role_boundaries, CORE_REFLEXES, ARCHITECTURE_ROLES_VS_RULES, SKILL_CATALOGUE_POLICY) ✅  
+**P1** : `.agent/rules/` × 6 (IDENTITY, SOUL, ROLE_BOUNDARIES, CORE_REFLEXES, CONFLICT_RESOLUTION, SKILL_CATALOGUE_POLICY) ✅  
 **P2.1** : 8 directives survie (session_start, session_end, session_end_critical, mission_first, dod_first_delivery, verification_loop, web_research_policy, stop_list) ✅  
 **P2.2** : 3 directives exécution (subagent_dispatch, context_budget, escalation_protocol) ✅  
 **P3** : 5 skills nouveaux (bootstrap_check, session_close, scope_check, dod_formulation, escalation_report) + index SKILLS.md mis à jour ✅  
@@ -38,7 +38,7 @@ P0→P4 **COMPLET**. Prochaine priorité : CI/CD.
 
 ### Fichiers modifiés cette session
 **Nouveaux :**
-- `.agent/rules/IDENTITY.md`, `SOUL.md`, `ROLE_BOUNDARIES.md`, `CORE_REFLEXES.md`, `ARCHITECTURE_ROLES_VS_RULES.md`, `SKILL_CATALOGUE_POLICY.md`
+- `.agent/rules/IDENTITY.rule.md`, `SOUL.rule.md`, `ROLE_BOUNDARIES.rule.md`, `CORE_REFLEXES.rule.md`, `CONFLICT_RESOLUTION.rule.md`, `SKILL_CATALOGUE_POLICY.rule.md`
 - `directives/21_SESSION_START.md`, `22_SESSION_END.md`, `23_SESSION_END_CRITICAL.md`, `24_MISSION_FIRST.md`, `25_DOD_FIRST_DELIVERY.md`, `26_VERIFICATION_LOOP.md`, `27_WEB_RESEARCH_POLICY.md`, `28_STOP_LIST.md`, `29_SUBAGENT_DISPATCH.md`, `30_CONTEXT_BUDGET.md`, `31_ESCALATION_PROTOCOL.md`
 - `skills/bootstrap_check.skill.md`, `session_close.skill.md`, `scope_check.skill.md`, `dod_formulation.skill.md`, `escalation_report.skill.md`
 - `agents/REVIEWER.agent.md`, `ADR_WRITER.agent.md`, `CHANGELOG_MANAGER.agent.md`

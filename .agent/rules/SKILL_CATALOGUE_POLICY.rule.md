@@ -1,4 +1,4 @@
-# SKILL_CATALOGUE_POLICY.md — ASEF
+# SKILL_CATALOGUE_POLICY.rule.md — ASEF
 
 > Politique de gestion du catalogue de skills.  
 > Sans cette politique, les skills s'accumulent sans structure → introuvables → inutilisés.

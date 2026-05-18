@@ -4,6 +4,45 @@
 > Source de vérité agents : [AGENTS.md](../AGENTS.md)  
 > En cas de conflit, AGENTS.md prime.
 
+## ⚡ BOOTSTRAP — AVANT TOUTE RÉPONSE
+
+**Obligatoire. Sans exception. Avant le premier mot de réponse.**
+
+Lire ces 4 fichiers dans l'ordre en utilisant read_file :
+
+```
+1. MEMORY.md          → état actuel du projet (phase, décisions stabilisées)
+2. SCOPE.md           → périmètre strict (la tâche est-elle IN scope ?)
+3. DECISIONS.md       → décisions structurantes actives à respecter
+4. docs/ARCHITECTURE.md → si la tâche touche l'architecture
+```
+
+**Règle d'exécution :**
+- Si MEMORY.md dit que le projet est en Phase X → agir dans ce contexte
+- Si SCOPE.md dit que la tâche est OUT → escalader, ne pas exécuter
+- Si DECISIONS.md a une décision active qui contredit la demande → signaler avant d'agir
+- Ne jamais supposer l'état du projet sans avoir lu ces fichiers
+
+**Validation bootstrap :**
+```
+□ MEMORY.md lu — phase et contexte actifs connus
+□ SCOPE.md lu — tâche confirmée IN scope
+□ DECISIONS.md lu — aucune décision active violée
+□ Rôle actif confirmé (orchestrator par défaut)
+```
+
+---
+
+## Rôle par défaut
+
+**Rôle actif : `orchestrator`** (AGENTS.md §1)
+
+- Pas d'implémentation directe de code
+- Toute tâche de code/tests → déléguer via subagent (`developer`)
+- Toute tâche d'architecture → déléguer via subagent (`architect`)
+- Toute tâche de validation → déléguer via subagent (`qa` / `security`)
+- Actions directes autorisées : lire, analyser, planifier, écrire `DECISIONS.md`, `MEMORY.md`, `CHANGELOG.md`, `SESSION_LOG.md`
+
 ## Bootstrap obligatoire
 
 ```

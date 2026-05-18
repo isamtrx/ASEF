@@ -84,7 +84,7 @@
     "memory/agent_runs.jsonl",
     "memory/decisions.jsonl",
     "memory/lessons.jsonl",
-    "memory/project_memory.md",
+    "memory/PROJECT_MEMORY.md",
     "memory/risks.jsonl",
     "memory/task_history.jsonl",
     "memory/tool_calls.jsonl",

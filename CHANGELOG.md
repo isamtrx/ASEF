@@ -10,14 +10,42 @@
 ## [Unreleased]
 
 ### Added
-- `MANIFEST.md` — Contrat public des 12 garanties ASEF (G-01 à G-12)
-- `VISION.md` — Vision ASEF 2.0 : meta-framework universel, architecture 3 couches
-- `core/` — 11 fichiers primitifs universels transverses à tout framework ASEF :
-  - `ASEF-Core.md` (10 agents universels, pipeline G0-G9, règles d'extension)
-  - `ASEF-Gates.md` (gates G0-G9 avec checklists et matrice de maturité)
-  - `ASEF-Memory.md` (modèle mémoire systémique à 4 fichiers)
-  - `ASEF-Evidence.md` (taxonomie de preuves, 7 types, format evidence package)
-  - `ASEF-Risk.md` (9 catégories, scoring P×I 1-9, registre)
+- `HEARTBEAT.md` — Fichier de santé projet (détection contexte périmé > 7j)
+- `BRIEF.md` — Capsule de fin de session (lue au début de la session suivante)
+- `orchestration/WORKFLOW_TRIGGER_INDEX.md` — Routing O(1) task_type → workflow → agents
+- `.agent/rules/IDENTITY.rule.md` — Identité agent stable anti-dérive
+- `.agent/rules/SOUL.rule.md` — 8 principes de décision en cas de règles absentes
+- `.agent/rules/ROLE_BOUNDARIES.rule.md` — Matrice permissions écriture par rôle (référence D-0004)
+- `.agent/rules/CORE_REFLEXES.rule.md` — 8 réflexes automatiques (REFLEX-001 à 008)
+- `.agent/rules/CONFLICT_RESOLUTION.rule.md` — Résolution conflit rôle/règle (hiérarchie 5 niveaux)
+- `.agent/rules/SKILL_CATALOGUE_POLICY.rule.md` — Gouvernance ajout/deprecation des skills
+- `directives/21_SESSION_START.md` — Bootstrap de session (STEPS 1-6)
+- `directives/22_SESSION_END.md` — Fermeture de session (checklist STEPS 1-6)
+- `directives/23_SESSION_END_CRITICAL.md` — Récupération après session interrompue
+- `directives/24_MISSION_FIRST.md` — Mission obligatoire avant tout livrable > 3 fichiers / 100 lignes
+- `directives/25_DOD_FIRST_DELIVERY.md` — DoD ≤ 8 lignes avant exécution
+- `directives/26_VERIFICATION_LOOP.md` — Preuves obligatoires pour chaque déclaration "done"
+- `directives/27_WEB_RESEARCH_POLICY.md` — Hiérarchie outils web (browser > search > fetch_webpage)
+- `directives/28_STOP_LIST.md` — 8 conditions d'arrêt immédiat
+- `directives/29_SUBAGENT_DISPATCH.md` — Dispatch composite (équipe) vs dispatch solo
+- `directives/30_CONTEXT_BUDGET.md` — Gestion budget tokens fenêtre de contexte
+- `directives/31_ESCALATION_PROTOCOL.md` — Format et protocole escalade humaine
+- `skills/bootstrap_check.skill.md` — Vérification bootstrap complet
+- `skills/session_close.skill.md` — Fermeture propre de session
+- `skills/scope_check.skill.md` — Vérification IN/OUT SCOPE
+- `skills/dod_formulation.skill.md` — Formulation DoD avant livrable
+- `skills/escalation_report.skill.md` — Rapport structuré d'escalade
+- `agents/REVIEWER.agent.md` — Agent revue et approbation de changements
+- `agents/ADR_WRITER.agent.md` — Agent rédaction ADR conformes ASEF
+- `agents/CHANGELOG_MANAGER.agent.md` — Agent maintenance CHANGELOG
+
+### Changed
+- `.github/copilot-instructions.md` — Bloc ⚡ BOOTSTRAP ajouté en première section
+- `.github/instructions/session_start.instructions.md` — Créé (applyTo: "**")
+- `DECISIONS.md` — D-0004 ajouté (contrainte écriture orchestrator)
+- `skills/SKILLS.md` — 5 nouveaux skills indexés (11 total)
+
+
   - `ASEF-HITL.md` (13 triggers HITL, format notification, comportement pipeline)
   - `ASEF-Workflow.md` (statuts, WF-INTAKE, WF-EXECUTION)
   - `ASEF-Decision.md` (6 types, format ADR et EXCEPTION, DecisionAgent)
@@ -41,7 +69,7 @@
   - `improve-framework.md` (gap analysis, ADR, validation)
   - `specialize-framework.md` (héritage ASEF-Core, domain layer)
   - `use-copilot-cli-for-patch.md` (règles chirurgicales, validation)
-- `evaluations/mission_scorecard.md` — Grille 20 points, seuils ACCEPTED/PARTIAL/REJECTED
+- `evaluations/MISSION_SCORECARD.md` — Grille 20 points, seuils ACCEPTED/PARTIAL/REJECTED
 - `domains/software/ASEF-QA/README.md` — Framework QA avec 4 agents et 2 workflows
 
 ---

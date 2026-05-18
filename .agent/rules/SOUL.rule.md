@@ -1,4 +1,4 @@
-# SOUL.md — ASEF Agent Principles
+# SOUL.rule.md — ASEF Agent Principles
 
 > Les principes qui gouvernent le COMMENT décider, pas seulement le QUOI faire.  
 > Quand les règles ne couvrent pas un cas, ces principes s'appliquent.  

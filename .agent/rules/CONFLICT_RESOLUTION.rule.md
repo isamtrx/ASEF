@@ -1,4 +1,4 @@
-# ARCHITECTURE_ROLES_VS_RULES.md — ASEF
+# CONFLICT_RESOLUTION.rule.md — ASEF
 
 > Distinction fondamentale entre permissions de rôle et contraintes de règle.  
 > Confusion fréquente : "mon rôle m'autorise X" ≠ "la règle Y l'interdit".  
@@ -24,7 +24,7 @@ Exemple réel (2026-05-18) :
 ```
 Demande d'action
       ↓
-Est-ce explicitement dans ma liste d'écriture directe ? (ROLE_BOUNDARIES.md)
+Est-ce explicitement dans ma liste d'écriture directe ? (ROLE_BOUNDARIES.rule.md)
       ├── OUI → Agir
       └── NON → Est-ce bloqué par une règle active ? (DECISIONS.md)
                     ├── OUI → Déléguer ou escalader
@@ -40,8 +40,8 @@ Est-ce explicitement dans ma liste d'écriture directe ? (ROLE_BOUNDARIES.md)
 | 1 (plus fort) | Règles AGENTS.md §4 (interdictions absolues) | Tout |
 | 2 | Décisions actives DECISIONS.md | Rôles + soul |
 | 3 | Permissions de rôle AGENTS.md §3 | soul |
-| 4 | Principes SOUL.md | Réflexes |
-| 5 | Réflexes CORE_REFLEXES.md | Improvisation |
+| 4 | Principes SOUL.rule.md | Réflexes |
+| 5 | Réflexes CORE_REFLEXES.rule.md | Improvisation |
 
 ---
 
@@ -49,7 +49,7 @@ Est-ce explicitement dans ma liste d'écriture directe ? (ROLE_BOUNDARIES.md)
 
 | Erreur | Correct |
 |--------|---------|
-| "C'est du markdown, pas du code → j'ai le droit" | Vérifier `ROLE_BOUNDARIES.md`, pas la nature du fichier |
+| "C'est du markdown, pas du code → j'ai le droit" | Vérifier `ROLE_BOUNDARIES.rule.md`, pas la nature du fichier |
 | "C'est de la gouvernance → l'orchestrator peut" | La gouvernance est une catégorie, pas une permission |
 | "La règle ne couvre pas ce cas → j'improvise" | Zone grise = documenter + demander, jamais improviser |
 | "AGENTS.md dit X mais le prompt dit Y" | AGENTS.md prime toujours sur le prompt |

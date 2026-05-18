@@ -1,4 +1,4 @@
-# ROLE_BOUNDARIES.md — ASEF Role Boundaries
+# ROLE_BOUNDARIES.rule.md — ASEF Role Boundaries
 
 > Carte explicite de ce que chaque rôle peut et ne peut pas faire.  
 > Quand : avant toute action, pour vérifier si l'action est dans mon périmètre.  

@@ -29,6 +29,23 @@
 | ADR-0004 | Orchestration multi-agents — protocole handoff | Validé | 2026-05-15 | [docs/adr/ADR-0004-agent-orchestration.md](docs/adr/ADR-0004-agent-orchestration.md) |
 | ADR-0005 | Stratégie de branches Git | Validé | 2026-05-15 | [docs/adr/ADR-0005-branching-strategy.md](docs/adr/ADR-0005-branching-strategy.md) |
 | ADR-0006 | Modèle de distribution ASEF | Validé | 2026-05-15 | [docs/adr/ADR-0006-distribution-model.md](docs/adr/ADR-0006-distribution-model.md) |
+| D-0004 | Périmètre d'écriture directe de l'orchestrator | Validé | 2026-05-18 | inline |
+
+---
+
+## D-0004
+
+**Titre :** Périmètre d'écriture directe de l'orchestrator  
+**Date :** 2026-05-18  
+**Statut :** Validé  
+**Contexte :** En session 2026-05-18, l'orchestrator a écrit directement `copilot-instructions.md` et `session_start.instructions.md` sans délégation, rationalisant que "c'est du markdown de gouvernance". Ce contournement silencieux des règles AGENTS.md §3 a été flagué par le superviseur humain.  
+**Options :**  
+- A : Élargir la liste des fichiers que l'orchestrator peut écrire directement  
+- B : Contrainte stricte — toute écriture hors liste explicite = délégation obligatoire  
+**Décision :** B — contrainte stricte.  
+**Raison :** Élargir la liste crée une surface de rationalisation non bornée. La contrainte stricte force la traçabilité : si un fichier n'est pas sur la liste, la délégation est obligatoire ou la liste doit être mise à jour via une décision explicite.  
+**Conséquences :** L'orchestrator ne peut écrire directement que : `DECISIONS.md`, `MEMORY.md`, `SESSION_LOG.md`, `CHANGELOG.md`. Toute autre écriture → délégation `docs` ou `developer`. Violations = escalade humaine.  
+**Réversibilité :** Réversible via nouvelle décision D-XXXX.
 
 ---
 

@@ -34,7 +34,71 @@
 
 ---
 
-## [2026-05-18] — Migration ASEF → ASEF 2.0 (intégration asef-runtime)
+## [2026-05-19] — Absorption openkern→ASEF P0→P4 complète
+
+**Objectif :** Exécuter le plan d'absorption openkern→ASEF (IN SCOPE uniquement) et rendre le bootstrap systématique  
+**Résultat :** Complété — 27 fichiers créés, 4 fichiers modifiés
+
+### Actions
+- Bootstrap `copilot-instructions.md` renforcé (bloc ⚡ AVANT TOUTE RÉPONSE)
+- `session_start.instructions.md` créé (applyTo: "**") — injection automatique
+- D-0004 enregistré (contrainte écriture orchestrator)
+- P0 : `HEARTBEAT.md`, `BRIEF.md`, `orchestration/WORKFLOW_TRIGGER_INDEX.md`
+- P1 : 6 fichiers `.agent/rules/` (identity, soul, role_boundaries, CORE_REFLEXES, ARCHITECTURE_ROLES_VS_RULES, SKILL_CATALOGUE_POLICY)
+- P2.1 : 8 directives survie (session_start, session_end, session_end_critical, mission_first, dod_first_delivery, verification_loop, web_research_policy, stop_list)
+- P2.2 : 3 directives exécution (subagent_dispatch, context_budget, escalation_protocol)
+- P3 : 5 skills (bootstrap_check, session_close, scope_check, dod_formulation, escalation_report) + `skills/SKILLS.md` mis à jour
+- P4 : 3 agents (REVIEWER, ADR_WRITER, CHANGELOG_MANAGER)
+
+### Décisions
+- D-0004 actif : orchestrator écriture directe = 4 fichiers uniquement
+- Exception D-0004 accordée par superviseur humain ("go") pour l'ensemble de la session
+
+### Fichiers créés (27)
+- `.agent/rules/` × 6
+- `directives/` × 11 (session_start, session_end, session_end_critical, mission_first, dod_first_delivery, verification_loop, web_research_policy, stop_list, subagent_dispatch, context_budget, escalation_protocol)
+- `skills/` × 5 (bootstrap_check, session_close, scope_check, dod_formulation, escalation_report)
+- `agents/` × 3 (REVIEWER, ADR_WRITER, CHANGELOG_MANAGER)
+- `HEARTBEAT.md`, `BRIEF.md`, `orchestration/WORKFLOW_TRIGGER_INDEX.md`
+
+### Fichiers modifiés
+- `.github/copilot-instructions.md`
+- `.github/instructions/session_start.instructions.md`
+- `DECISIONS.md`
+- `skills/SKILLS.md`
+
+### Prochaines actions
+- [ ] CI/CD déploiement (priorité Sprint 1)
+
+---
+
+## [2026-05-18] — Post-rename : références internes + registry skills sync
+
+**Objectif :** Corriger les références internes après renommage de 14 fichiers, synchroniser registry  
+**Résultat :** Complété
+
+### Actions
+- Références internes mises à jour (10 occurrences dans 6 fichiers) : H1 titles, CORE_REFLEXES, ARCHITECTURE_ROLES_VS_RULES, REVIEWER.agent.md, 28_STOP_LIST.md
+- BRIEF.md et CHANGELOG.md mis à jour avec les nouveaux noms de fichiers
+- Bloc métadonnées obligatoire (`**id**`, `**version**`, `**agents**`, `**tools_required**`) ajouté aux 5 nouveaux skills
+- `registry/skills.registry.json` — 5 nouvelles entrées ajoutées (11 total)
+- Référence stale `directives/stop_list.md` → `28_STOP_LIST.md` dans `escalation_report.skill.md`
+- 52 tests passés, `validate_skills.py` : 11/11 OK
+
+### Fichiers modifiés
+- `.agent/rules/IDENTITY.md`, `ROLE_BOUNDARIES.md`, `SOUL.md`, `CORE_REFLEXES.md`, `ARCHITECTURE_ROLES_VS_RULES.md`
+- `agents/REVIEWER.agent.md`
+- `directives/28_STOP_LIST.md`
+- `skills/bootstrap_check.skill.md`, `session_close.skill.md`, `scope_check.skill.md`, `dod_formulation.skill.md`, `escalation_report.skill.md`
+- `registry/skills.registry.json`
+- `BRIEF.md`, `CHANGELOG.md`
+
+### Prochaines actions
+- [ ] CI/CD déploiement (priorité Sprint 1)
+
+---
+
+
 
 **Objectif :** Intégrer les 10 améliorations structurelles de D:\asef-runtime dans D:\ASEF
 **Résultat :** Complété — 30 fichiers créés, 2 fichiers mis à jour

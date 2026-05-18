@@ -12,9 +12,9 @@
 | Champ | Valeur |
 |-------|--------|
 | Phase | Sprint 1 — Opérationnalisation |
-| Statut | Architecture documentaire initialisée (CI non déployé) |
-| Date dernier état | [À mettre à jour] |
-| Prochaine action prioritaire | Déployer `.github/workflows/ci.yml` sur un projet cible |
+| Statut | Framework P0→P4 complet (CI non déployé) |
+| Date dernier état | 2026-05-19 |
+| Prochaine action prioritaire | Déployer `.github/workflows/ci.yml` + synchroniser `registry/skills.registry.json` |
 
 ## Décisions stabilisées
 
@@ -25,6 +25,7 @@
 | Quality gates bloquants G4+G5 | Sécurité et tests non négociables | QUALITY_GATES.md |
 | Human-in-the-loop sur Gate 7 | Release critique = validation humaine obligatoire | AGENTS.md |
 | Stack MVP : VS Code + Copilot + Claude Code + GitHub | Définie dans PROJECT.md | PROJECT.md |
+| D-0004 : orchestrator write-list = 4 fichiers | Contrainte stricte d'écriture, exception humaine requise | DECISIONS.md |
 
 ## Hypothèses actives
 

@@ -1,4 +1,4 @@
-# IDENTITY.md — ASEF Agent Identity
+# IDENTITY.rule.md — ASEF Agent Identity
 
 > Ce fichier définit l'identité stable de l'agent opérant dans ASEF.  
 > L'identité ne change pas selon le prompt. Elle est lue, pas inférée.
