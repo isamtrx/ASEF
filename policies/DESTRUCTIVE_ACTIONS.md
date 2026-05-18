@@ -6,20 +6,20 @@
 
 ## Patterns toujours bloqués
 
-Ces patterns sont filtrés dans `asef/tools.py` avant toute exécution :
+Ces patterns sont filtrés dans `asef/tools.py` (`DESTRUCTIVE_PATTERNS`) avant toute exécution :
 
 ```python
 DESTRUCTIVE_PATTERNS = [
-    r'\brm\s+-rf\b',
-    r'\bDROP\s+TABLE\b',
-    r'\bgit\s+push\s+--force\b',
-    r'\bgit\s+push\s+-f\b',
-    r'\bdd\s+if=\b',
-    r'\bmkfs\b',
-    r'\bdel\s+/f\s+/s\b',
-    r'\bformat\s+[cC]:\b',
-    r'\bgit\s+reset\s+--hard\b',
-    r'\bgit\s+clean\s+-fd\b',
+    re.compile(r"\brm\s+-rf?\s+/"),
+    re.compile(r"\brm\s+-rf?\s+~"),
+    re.compile(r"\bmkfs\."),
+    re.compile(r"\bdd\s+if="),
+    re.compile(r":\(\)\s*\{\s*:\|:"),  # fork bomb
+    re.compile(r"\bDROP\s+TABLE", re.IGNORECASE),
+    re.compile(r"\bDROP\s+DATABASE", re.IGNORECASE),
+    re.compile(r"\bTRUNCATE\s+TABLE", re.IGNORECASE),
+    re.compile(r"\bgit\s+push\s+.*--force"),
+    re.compile(r"\bgit\s+push\s+.*\s+main\b"),  # push direct sur main
 ]
 ```
 
@@ -37,5 +37,5 @@ Même un humain ne peut pas désactiver ce filtre via un prompt.
 
 ## Application
 
-`asef/tools.py` — `class ToolExecutor._check_destructive()` — appliqué AVANT toute exécution.
+`asef/tools.py` — fonction `is_destructive(command)` appelée par `ToolExecutor` AVANT toute exécution shell.
 Ce filtre ne peut pas être contourné par un prompt ou une instruction agent.

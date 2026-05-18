@@ -434,6 +434,7 @@ def main() -> int:
     # Live run -- requires asef.orchestrator
     try:
         from asef.orchestrator import Orchestrator
+        from asef.config import Config
     except ImportError:
         blocked = {
             "status": "BLOCKED_RUNTIME_MISSING",
@@ -444,21 +445,22 @@ def main() -> int:
         return 1
 
     try:
-        orchestrator = Orchestrator()
-        result = orchestrator.run(task_id=task_id, description=description)
+        config = Config.from_env(ROOT)
+        orchestrator = Orchestrator(config)
+        result = orchestrator.run_task(description)
 
-        if result.get("status") == "completed":
+        if result.outcome == "success":
             artifact_path = _write_artifact(task_id, task_type, plan)
             _write_memory(task_id, task_type, description, "completed",
                           artifact_path.relative_to(ROOT).as_posix())
             print(f"\nOK -- Task {task_id} completed")
-            gates_passed = result.get("gates_passed", [])
-            print(f"Gates passed: {', '.join(gates_passed)}")
+            print(f"Gates passed: {', '.join(result.gates_passed())}")
             return 0
         else:
             _write_memory(task_id, task_type, description, "failed")
-            print(f"\nFAILED -- Task {task_id} did not complete")
-            print(json.dumps(result, indent=2, ensure_ascii=False))
+            print(f"\nFAILED -- Task {task_id} outcome={result.outcome}")
+            if result.escalation_reason:
+                print(f"Reason: {result.escalation_reason}")
             return 1
 
     except Exception as e:
