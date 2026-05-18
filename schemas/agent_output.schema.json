@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "agent_output.schema.json",
+  "title": "ASEF Agent Output",
+  "type": "object",
+  "required": ["role", "task_id", "iterations"],
+  "additionalProperties": true,
+  "properties": {
+    "role": {
+      "type": "string",
+      "enum": ["orchestrator", "architect", "developer", "qa", "security", "docs"],
+      "description": "Rôle de l'agent producteur"
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^T-[0-9a-f]{8}$"
+    },
+    "escalation": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "required": ["reason", "urgency"],
+          "properties": {
+            "reason": {"type": "string"},
+            "recommendation": {"type": "string"},
+            "evidence": {"type": "string"},
+            "urgency": {"type": "string", "enum": ["CRITIQUE", "OBLIGATOIRE", "RECOMMANDÉE"]}
+          }
+        }
+      ]
+    },
+    "iterations": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tokens_in": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tokens_out": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

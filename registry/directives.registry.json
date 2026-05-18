@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-05-17T00:00:00Z",
+  "items": [
+    {
+      "id": "00_MASTER",
+      "name": "MASTER",
+      "path": "directives/00_MASTER.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Point d'entrée obligatoire, chargé pour toute tâche",
+      "agents": ["orchestrator", "architect", "developer", "qa", "security", "docs"]
+    },
+    {
+      "id": "06_BACKEND",
+      "name": "BACKEND",
+      "path": "directives/06_BACKEND.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Règles Python backend, wraps backend.instructions.md",
+      "agents": ["developer", "qa"]
+    },
+    {
+      "id": "09_AGENT_SYSTEM",
+      "name": "AGENT_SYSTEM",
+      "path": "directives/09_AGENT_SYSTEM.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Règles pour créer, modifier, utiliser agents/skills/tools",
+      "agents": ["orchestrator", "architect"]
+    },
+    {
+      "id": "11_TESTING",
+      "name": "TESTING",
+      "path": "directives/11_TESTING.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Règles pytest, jamais auto-certifier un test",
+      "agents": ["developer", "qa"]
+    },
+    {
+      "id": "12_QA",
+      "name": "QA",
+      "path": "directives/12_QA.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Validation QA G3/G4, wraps qa.instructions.md",
+      "agents": ["qa"]
+    },
+    {
+      "id": "13_SECURITY",
+      "name": "SECURITY",
+      "path": "directives/13_SECURITY.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Règles sécurité G5, wraps security.instructions.md",
+      "agents": ["security", "developer"]
+    },
+    {
+      "id": "17_DOCUMENTATION",
+      "name": "DOCUMENTATION",
+      "path": "directives/17_DOCUMENTATION.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Règles documentation, wraps docs.instructions.md",
+      "agents": ["docs"]
+    },
+    {
+      "id": "20_GOVERNANCE",
+      "name": "GOVERNANCE",
+      "path": "directives/20_GOVERNANCE.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Règles gouvernance ADR, fichiers protégés, Gate G7",
+      "agents": ["orchestrator", "architect"]
+    }
+  ]
+}

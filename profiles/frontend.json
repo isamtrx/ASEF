@@ -1,0 +1,57 @@
+{
+  "profile": "frontend",
+  "description": "Frontend ASEF installation profile. Adds design, accessibility and visual QA layers.",
+  "required_layers": [
+    "AGENTS.md",
+    "directives",
+    "agents",
+    "orchestration",
+    "skills",
+    "tools",
+    "contracts",
+    "schemas",
+    "policies",
+    "registry",
+    "execution",
+    "memory",
+    "artifacts"
+  ],
+  "optional_layers": [
+    "design",
+    "accessibility",
+    "visual_qa"
+  ],
+  "excluded_layers": [
+    "runtime",
+    "evaluations",
+    "benchmarks",
+    "missions"
+  ],
+  "required_scripts": [
+    "execution/validate_framework.py",
+    "execution/route_task.py",
+    "execution/run_task.py",
+    "execution/asef_doctor.py",
+    "execution/bootstrap_framework.py"
+  ],
+  "required_checks": [
+    "agents_md_present",
+    "registry_valid",
+    "memory_writable",
+    "artifacts_writable",
+    "frontend_stack_detected"
+  ],
+  "stack_indicators": [
+    "package.json",
+    "vite.config.js",
+    "vite.config.ts",
+    "next.config.js",
+    "next.config.ts",
+    "nuxt.config.ts",
+    "tailwind.config.js",
+    "tailwind.config.ts",
+    "src/",
+    "app/",
+    "pages/"
+  ]
+}

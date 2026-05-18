@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-05-17T00:00:00Z",
+  "items": [
+    {
+      "id": "repo_audit",
+      "name": "repo_audit",
+      "path": "skills/repo_audit.skill.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Audit complet du repo : structure, registres, gates",
+      "agents": ["orchestrator", "qa"]
+    },
+    {
+      "id": "code_review",
+      "name": "code_review",
+      "path": "skills/code_review.skill.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Revue de code chirurgicale",
+      "agents": ["developer", "qa"]
+    },
+    {
+      "id": "test_generation",
+      "name": "test_generation",
+      "path": "skills/test_generation.skill.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Génération de tests pytest conformes au style existant",
+      "agents": ["developer", "qa"]
+    },
+    {
+      "id": "security_review",
+      "name": "security_review",
+      "path": "skills/security_review.skill.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Gate G5 complet : secret scan, SAST, audit dépendances",
+      "agents": ["security"]
+    },
+    {
+      "id": "memory_update",
+      "name": "memory_update",
+      "path": "skills/memory_update.skill.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Mise à jour de la mémoire structurée après une tâche",
+      "agents": ["orchestrator", "docs"]
+    },
+    {
+      "id": "documentation_update",
+      "name": "documentation_update",
+      "path": "skills/documentation_update.skill.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "CHANGELOG, SESSION_LOG, evidence package G6",
+      "agents": ["docs"]
+    }
+  ]
+}

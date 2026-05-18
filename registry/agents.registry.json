@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-05-17T00:00:00Z",
+  "items": [
+    {
+      "id": "orchestrator",
+      "name": "Orchestrator",
+      "path": "agents/ORCHESTRATOR.agent.md",
+      "implementation": "asef/orchestrator.py",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Coordonne le pipeline G0→G7, dispatche les agents, valide les gates",
+      "tools": ["read_file", "list_directory", "write_file", "run_command", "escalate"]
+    },
+    {
+      "id": "architect",
+      "name": "Architect",
+      "path": "agents/ARCHITECT.agent.md",
+      "implementation": "asef/agents.py#architect",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Conçoit et valide les décisions structurantes, produit les ADR",
+      "tools": ["read_file", "list_directory", "write_file", "escalate"]
+    },
+    {
+      "id": "developer",
+      "name": "Developer",
+      "path": "agents/DEVELOPER.agent.md",
+      "implementation": "asef/agents.py#developer",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Implémente le code conforme aux standards, écrit les tests",
+      "tools": ["read_file", "list_directory", "write_file", "run_command", "escalate"]
+    },
+    {
+      "id": "qa",
+      "name": "QA",
+      "path": "agents/QA.agent.md",
+      "implementation": "asef/agents.py#qa",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Exécute G3 (lint) et G4 (tests), produit le rapport QA",
+      "tools": ["read_file", "list_directory", "run_command", "write_file", "escalate"]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "path": "agents/SECURITY.agent.md",
+      "implementation": "asef/agents.py#security",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Exécute G5 : secret scan, SAST, audit dépendances",
+      "tools": ["read_file", "list_directory", "run_command", "write_file", "escalate"]
+    },
+    {
+      "id": "docs",
+      "name": "Docs",
+      "path": "agents/DOCS.agent.md",
+      "implementation": "asef/agents.py#docs",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Produit et maintient la documentation, G6 evidence package",
+      "tools": ["read_file", "list_directory", "write_file", "escalate"]
+    }
+  ]
+}

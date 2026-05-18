@@ -1,0 +1,89 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-05-17T00:00:00Z",
+  "items": [
+    {
+      "id": "G0",
+      "name": "G0 — Intake",
+      "path": "docs/quality/QUALITY_GATES.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Description ≥ 5 mots, SCOPE.md présent",
+      "blocking": true,
+      "automated": true
+    },
+    {
+      "id": "G1",
+      "name": "G1 — Scope",
+      "path": "docs/quality/QUALITY_GATES.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Tâche IN scope (contre SCOPE.md)",
+      "blocking": true,
+      "automated": true
+    },
+    {
+      "id": "G2",
+      "name": "G2 — ADR",
+      "path": "docs/quality/QUALITY_GATES.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "ADR présent si décision structurante",
+      "blocking": false,
+      "automated": true
+    },
+    {
+      "id": "G3",
+      "name": "G3 — Lint",
+      "path": "docs/quality/QUALITY_GATES.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "ruff check . → exit 0",
+      "blocking": true,
+      "automated": true,
+      "command": "ruff check ."
+    },
+    {
+      "id": "G4",
+      "name": "G4 — Tests",
+      "path": "docs/quality/QUALITY_GATES.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "pytest -q tests/ → exit 0",
+      "blocking": true,
+      "automated": true,
+      "command": "pytest -q tests/"
+    },
+    {
+      "id": "G5",
+      "name": "G5 — Security",
+      "path": "docs/quality/QUALITY_GATES.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Secret scan + SAST + pip-audit → 0 findings critiques",
+      "blocking": true,
+      "automated": true
+    },
+    {
+      "id": "G6",
+      "name": "G6 — Documentation",
+      "path": "docs/quality/QUALITY_GATES.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "CHANGELOG.md + SESSION_LOG.md + evidence package",
+      "blocking": true,
+      "automated": false
+    },
+    {
+      "id": "G7",
+      "name": "G7 — Release",
+      "path": "docs/quality/QUALITY_GATES.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Validation humaine — TOUJOURS humain, jamais automatisé",
+      "blocking": true,
+      "automated": false,
+      "human_required": true
+    }
+  ]
+}

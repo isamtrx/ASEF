@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "registry.schema.json",
+  "title": "ASEF Registry",
+  "description": "Schema commun pour tous les registres ASEF",
+  "type": "object",
+  "required": ["version", "generated_at", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "items": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "path", "status"],
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "path": {"type": "string"},
+          "status": {"type": "string", "enum": ["active", "deprecated", "draft"]},
+          "version": {"type": "string"},
+          "description": {"type": "string"},
+          "agents": {"type": "array", "items": {"type": "string"}},
+          "gates": {"type": "array", "items": {"type": "string"}},
+          "tools": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

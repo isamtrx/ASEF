@@ -1,0 +1,58 @@
+{
+  "profile": "fullstack",
+  "description": "Fullstack ASEF installation profile. Combines frontend and backend layers.",
+  "required_layers": [
+    "AGENTS.md",
+    "directives",
+    "agents",
+    "orchestration",
+    "skills",
+    "tools",
+    "contracts",
+    "schemas",
+    "policies",
+    "registry",
+    "execution",
+    "memory",
+    "artifacts"
+  ],
+  "optional_layers": [
+    "design",
+    "accessibility",
+    "visual_qa",
+    "config",
+    "context",
+    "runtime"
+  ],
+  "excluded_layers": [
+    "evaluations",
+    "benchmarks"
+  ],
+  "required_scripts": [
+    "execution/validate_framework.py",
+    "execution/route_task.py",
+    "execution/run_task.py",
+    "execution/asef_doctor.py",
+    "execution/bootstrap_framework.py"
+  ],
+  "required_checks": [
+    "agents_md_present",
+    "registry_valid",
+    "memory_writable",
+    "artifacts_writable",
+    "frontend_stack_detected",
+    "backend_stack_detected",
+    "security_policy_present"
+  ],
+  "stack_indicators": [
+    "package.json",
+    "pyproject.toml",
+    "requirements.txt",
+    "vite.config.js",
+    "vite.config.ts",
+    "next.config.js",
+    "next.config.ts",
+    "src/",
+    "api/"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "memory_entry.schema.json",
+  "title": "ASEF Memory Entry",
+  "type": "object",
+  "required": ["id", "date", "type"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identifiant unique de l'entrée mémoire"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["decision", "lesson", "risk", "task", "agent_run", "tool_call"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "resolved", "archived", "obsolete"]
+    }
+  }
+}

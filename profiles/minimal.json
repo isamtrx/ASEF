@@ -1,0 +1,47 @@
+{
+  "profile": "minimal",
+  "description": "Minimal ASEF installation profile. Core governance and execution layers only.",
+  "required_layers": [
+    "AGENTS.md",
+    "SCOPE.md",
+    "MEMORY.md",
+    "DECISIONS.md",
+    "directives",
+    "agents",
+    "orchestration",
+    "skills",
+    "tools",
+    "contracts",
+    "schemas",
+    "policies",
+    "registry",
+    "execution",
+    "memory",
+    "artifacts",
+    "docs/quality"
+  ],
+  "optional_layers": [],
+  "excluded_layers": [
+    "runtime",
+    "gates",
+    "playbooks",
+    "evaluations",
+    "benchmarks",
+    "missions",
+    "config",
+    "context"
+  ],
+  "required_scripts": [
+    "execution/validate_framework.py",
+    "execution/route_task.py",
+    "execution/run_task.py",
+    "execution/asef_doctor.py",
+    "execution/bootstrap_framework.py"
+  ],
+  "required_checks": [
+    "agents_md_present",
+    "registry_valid",
+    "memory_writable",
+    "artifacts_writable"
+  ]
+}

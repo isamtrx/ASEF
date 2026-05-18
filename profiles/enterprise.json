@@ -1,0 +1,61 @@
+{
+  "profile": "enterprise",
+  "description": "Enterprise ASEF installation profile. Full governance with privacy, observability, risk register and audit evidence.",
+  "required_layers": [
+    "AGENTS.md",
+    "directives",
+    "agents",
+    "orchestration",
+    "skills",
+    "tools",
+    "contracts",
+    "schemas",
+    "policies",
+    "registry",
+    "execution",
+    "memory",
+    "artifacts",
+    "runtime",
+    "gates",
+    "missions",
+    "playbooks",
+    "evaluations"
+  ],
+  "optional_layers": [
+    "benchmarks",
+    "config",
+    "context",
+    "knowledge"
+  ],
+  "excluded_layers": [],
+  "required_scripts": [
+    "execution/validate_framework.py",
+    "execution/route_task.py",
+    "execution/run_task.py",
+    "execution/asef_doctor.py",
+    "execution/bootstrap_framework.py"
+  ],
+  "required_checks": [
+    "agents_md_present",
+    "registry_valid",
+    "memory_writable",
+    "artifacts_writable",
+    "runtime_present",
+    "gates_present",
+    "missions_present",
+    "playbooks_present",
+    "evaluations_present",
+    "security_policy_present",
+    "governance_docs_present",
+    "risk_register_present",
+    "audit_evidence_present"
+  ],
+  "additional_layers": {
+    "privacy": "docs/security/SECURITY.md or equivalent privacy policy",
+    "observability": "Structured logging in memory/ or runtime/",
+    "release": "CHANGELOG.md with versioned releases",
+    "risk_register": "memory/risks.jsonl or docs/governance/",
+    "governance": "GOVERNANCE.md or docs/governance/",
+    "audit_evidence": "artifacts/reports/ with evidence packages"
+  }
+}

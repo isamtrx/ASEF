@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "tool_call.schema.json",
+  "title": "ASEF Tool Call",
+  "type": "object",
+  "required": ["tool_id", "agent_role", "timestamp"],
+  "additionalProperties": true,
+  "properties": {
+    "tool_id": {
+      "type": "string",
+      "enum": ["read_file", "list_directory", "write_file", "run_command", "escalate"]
+    },
+    "agent_role": {
+      "type": "string",
+      "enum": ["orchestrator", "architect", "developer", "qa", "security", "docs"]
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^T-[0-9a-f]{8}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "exit_code": {
+      "type": ["integer", "null"]
+    },
+    "blocked": {
+      "type": "boolean",
+      "description": "True if tool call was blocked by security filter"
+    },
+    "block_reason": {
+      "type": "string",
+      "description": "Reason for blocking (destructive pattern, protected file, etc.)"
+    }
+  }
+}

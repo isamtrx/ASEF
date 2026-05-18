@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-05-17T00:00:00Z",
+  "items": [
+    {
+      "id": "BUGFIX_WORKFLOW",
+      "name": "BUGFIX_WORKFLOW",
+      "path": "orchestration/WORKFLOWS.md#BUGFIX_WORKFLOW",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Correction de bug documenté",
+      "agents": ["orchestrator", "developer", "qa", "security", "docs"],
+      "gates": ["G0", "G1", "G3", "G4", "G5", "G6"]
+    },
+    {
+      "id": "FEATURE_IMPLEMENTATION_WORKFLOW",
+      "name": "FEATURE_IMPLEMENTATION_WORKFLOW",
+      "path": "orchestration/WORKFLOWS.md#FEATURE_IMPLEMENTATION_WORKFLOW",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Implémentation de nouvelle fonctionnalité",
+      "agents": ["orchestrator", "architect", "developer", "qa", "security", "docs"],
+      "gates": ["G0", "G1", "G2", "G3", "G4", "G5", "G6"]
+    },
+    {
+      "id": "AUDIT_WORKFLOW",
+      "name": "AUDIT_WORKFLOW",
+      "path": "orchestration/WORKFLOWS.md#AUDIT_WORKFLOW",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Audit complet du repo",
+      "agents": ["orchestrator", "qa", "security", "docs"],
+      "gates": ["G0", "G1", "G3", "G4", "G5"]
+    },
+    {
+      "id": "SECURITY_REVIEW_WORKFLOW",
+      "name": "SECURITY_REVIEW_WORKFLOW",
+      "path": "orchestration/WORKFLOWS.md#SECURITY_REVIEW_WORKFLOW",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Revue de sécurité ciblée",
+      "agents": ["orchestrator", "security", "docs"],
+      "gates": ["G0", "G1", "G5"]
+    },
+    {
+      "id": "RELEASE_WORKFLOW",
+      "name": "RELEASE_WORKFLOW",
+      "path": "orchestration/WORKFLOWS.md#RELEASE_WORKFLOW",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Préparation et validation d'une release",
+      "agents": ["orchestrator", "qa", "security", "docs"],
+      "gates": ["G0", "G1", "G3", "G4", "G5", "G6", "G7"]
+    },
+    {
+      "id": "GOVERNANCE_WORKFLOW",
+      "name": "GOVERNANCE_WORKFLOW",
+      "path": "orchestration/WORKFLOWS.md#GOVERNANCE_WORKFLOW",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Décision ADR ou modification de gouvernance",
+      "agents": ["orchestrator", "architect", "docs"],
+      "gates": ["G0", "G1", "G2"]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+{"id": "LESSON-001", "date": "2026-05-17", "category": "governance", "error": "Couches documentaires créées sans connexion au runtime Python", "cause": "Documentation générée avant audit du code existant", "rule": "Toujours auditer asef/*.py avant de créer des directives — ne pas dupliquer ce qui existe"}
+{"id": "LESSON-002", "date": "2026-05-17", "category": "agents", "error": "Tentative de recréer le runtime existant", "cause": "asef/orchestrator.py non lu avant planification", "rule": "Lire TOUS les fichiers .py avant de proposer une architecture d'orchestration"}

@@ -1,0 +1,54 @@
+{
+  "profile": "backend",
+  "description": "Backend ASEF installation profile. Adds API, database and security layers.",
+  "required_layers": [
+    "AGENTS.md",
+    "directives",
+    "agents",
+    "orchestration",
+    "skills",
+    "tools",
+    "contracts",
+    "schemas",
+    "policies",
+    "registry",
+    "execution",
+    "memory",
+    "artifacts"
+  ],
+  "optional_layers": [
+    "config",
+    "context",
+    "runtime"
+  ],
+  "excluded_layers": [
+    "evaluations",
+    "benchmarks"
+  ],
+  "required_scripts": [
+    "execution/validate_framework.py",
+    "execution/route_task.py",
+    "execution/run_task.py",
+    "execution/asef_doctor.py",
+    "execution/bootstrap_framework.py"
+  ],
+  "required_checks": [
+    "agents_md_present",
+    "registry_valid",
+    "memory_writable",
+    "artifacts_writable",
+    "backend_stack_detected",
+    "security_policy_present"
+  ],
+  "stack_indicators": [
+    "pyproject.toml",
+    "requirements.txt",
+    "setup.py",
+    "fastapi",
+    "flask",
+    "django",
+    "express",
+    "api/",
+    "server/"
+  ]
+}

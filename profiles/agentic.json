@@ -1,0 +1,46 @@
+{
+  "profile": "agentic",
+  "description": "Agentic ASEF installation profile. Full agent governance with runtime, gates, missions and benchmarks.",
+  "required_layers": [
+    "AGENTS.md",
+    "directives",
+    "agents",
+    "orchestration",
+    "skills",
+    "tools",
+    "contracts",
+    "schemas",
+    "policies",
+    "registry",
+    "execution",
+    "memory",
+    "artifacts",
+    "runtime",
+    "gates",
+    "missions"
+  ],
+  "optional_layers": [
+    "playbooks",
+    "evaluations",
+    "benchmarks",
+    "config",
+    "context"
+  ],
+  "excluded_layers": [],
+  "required_scripts": [
+    "execution/validate_framework.py",
+    "execution/route_task.py",
+    "execution/run_task.py",
+    "execution/asef_doctor.py",
+    "execution/bootstrap_framework.py"
+  ],
+  "required_checks": [
+    "agents_md_present",
+    "registry_valid",
+    "memory_writable",
+    "artifacts_writable",
+    "runtime_present",
+    "gates_present",
+    "missions_present"
+  ]
+}

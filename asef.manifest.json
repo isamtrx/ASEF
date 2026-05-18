@@ -1,0 +1,58 @@
+{
+  "framework": "ASEF",
+  "version": "0.2.0",
+  "description": "Agentic Software Engineering Framework with governance, routing, validation, memory and artifacts.",
+  "required_layers": [
+    "AGENTS.md",
+    "directives",
+    "agents",
+    "orchestration",
+    "skills",
+    "tools",
+    "contracts",
+    "schemas",
+    "policies",
+    "registry",
+    "execution",
+    "memory",
+    "artifacts"
+  ],
+  "optional_layers": [
+    "runtime",
+    "gates",
+    "playbooks",
+    "evaluations",
+    "benchmarks",
+    "missions",
+    "config",
+    "context",
+    "connectors",
+    "adapters",
+    "events",
+    "scheduler",
+    "knowledge"
+  ],
+  "required_scripts": [
+    "execution/validate_framework.py",
+    "execution/route_task.py",
+    "execution/run_task.py",
+    "execution/asef_doctor.py",
+    "execution/bootstrap_framework.py"
+  ],
+  "minimum_proof": [
+    "framework_doctor_runs",
+    "bootstrap_help_runs",
+    "route_task_available",
+    "validation_available",
+    "artifact_path_available",
+    "memory_path_available"
+  ],
+  "profiles": [
+    "minimal",
+    "frontend",
+    "backend",
+    "fullstack",
+    "agentic",
+    "enterprise"
+  ]
+}

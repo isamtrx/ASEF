@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-05-17T00:00:00Z",
+  "items": [
+    {
+      "id": "read_file",
+      "name": "read_file",
+      "path": "tools/read_file.tool.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Lecture de fichiers, aucun effet de bord",
+      "level": "READ_ONLY",
+      "agents": ["orchestrator", "architect", "developer", "qa", "security", "docs"]
+    },
+    {
+      "id": "list_directory",
+      "name": "list_directory",
+      "path": "tools/list_directory.tool.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Liste de répertoires, aucun effet de bord",
+      "level": "READ_ONLY",
+      "agents": ["orchestrator", "architect", "developer", "qa", "security", "docs"]
+    },
+    {
+      "id": "write_file",
+      "name": "write_file",
+      "path": "tools/write_file.tool.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Écriture dans le workspace, filtrée par PROTECTED_FILES",
+      "level": "WRITE_WORKSPACE",
+      "agents": ["orchestrator", "developer", "qa", "security", "docs"]
+    },
+    {
+      "id": "run_command",
+      "name": "run_command",
+      "path": "tools/run_command.tool.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Commandes shell filtrées (patterns destructifs bloqués)",
+      "level": "EXECUTE_SAFE",
+      "agents": ["orchestrator", "developer", "qa", "security"]
+    },
+    {
+      "id": "escalate",
+      "name": "escalate",
+      "path": "tools/escalate.tool.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Escalade humaine, arrête le pipeline",
+      "level": "EXECUTE_SAFE",
+      "agents": ["orchestrator", "architect", "developer", "qa", "security", "docs"]
+    },
+    {
+      "id": "copilot_cli",
+      "name": "copilot_cli",
+      "path": "tools/copilot_cli.tool.md",
+      "status": "restricted",
+      "version": "1.0.0",
+      "description": "GitHub Copilot CLI — controlled patch generation, invokable only via playbook",
+      "level": "RESTRICTED",
+      "agents": ["qa", "developer"]
+    }
+  ]
+}

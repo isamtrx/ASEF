@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-05-17T00:00:00Z",
+  "items": [
+    {
+      "id": "POL-PERMISSIONS-001",
+      "name": "PERMISSIONS",
+      "path": "policies/PERMISSIONS.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Matrice de permissions par rôle agent"
+    },
+    {
+      "id": "POL-SECRET-001",
+      "name": "SECRET_HANDLING",
+      "path": "policies/SECRET_HANDLING.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Règles de gestion des secrets"
+    },
+    {
+      "id": "POL-HUMAN-001",
+      "name": "HUMAN_APPROVAL",
+      "path": "policies/HUMAN_APPROVAL.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Actions nécessitant validation humaine"
+    },
+    {
+      "id": "POL-DESTRUCTIVE-001",
+      "name": "DESTRUCTIVE_ACTIONS",
+      "path": "policies/DESTRUCTIVE_ACTIONS.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Patterns destructifs toujours bloqués"
+    },
+    {
+      "id": "POL-AUTONOMY-001",
+      "name": "AUTONOMY_LEVELS",
+      "path": "policies/AUTONOMY_LEVELS.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Niveaux d'autonomie par task_type"
+    },
+    {
+      "id": "POL-TOOL-ACCESS-001",
+      "name": "TOOL_ACCESS",
+      "path": "policies/TOOL_ACCESS.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Whitelist d'outils par rôle agent"
+    },
+    {
+      "id": "POL-DATA-001",
+      "name": "DATA_HANDLING",
+      "path": "policies/DATA_HANDLING.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Règles de traitement des données PII"
+    },
+    {
+      "id": "POL-NETWORK-001",
+      "name": "EXTERNAL_NETWORK",
+      "path": "policies/EXTERNAL_NETWORK.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Règles d'accès réseau"
+    },
+    {
+      "id": "POL-MODEL-001",
+      "name": "MODEL_USAGE",
+      "path": "policies/MODEL_USAGE.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Modèle LLM assigné par rôle"
+    }
+  ]
+}
