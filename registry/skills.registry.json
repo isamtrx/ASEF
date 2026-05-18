@@ -55,6 +55,51 @@
       "version": "1.0.0",
       "description": "CHANGELOG, SESSION_LOG, evidence package G6",
       "agents": ["docs"]
+    },
+    {
+      "id": "bootstrap_check",
+      "name": "bootstrap_check",
+      "path": "skills/bootstrap_check.skill.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Vérification bootstrap complet avant action",
+      "agents": ["orchestrator", "developer", "qa"]
+    },
+    {
+      "id": "session_close",
+      "name": "session_close",
+      "path": "skills/session_close.skill.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Fermeture propre de session avec persistance contexte",
+      "agents": ["orchestrator"]
+    },
+    {
+      "id": "scope_check",
+      "name": "scope_check",
+      "path": "skills/scope_check.skill.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Vérification IN/OUT SCOPE avant action",
+      "agents": ["orchestrator", "developer", "qa"]
+    },
+    {
+      "id": "dod_formulation",
+      "name": "dod_formulation",
+      "path": "skills/dod_formulation.skill.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Formulation DoD ≤ 8 critères binaires avant livrable",
+      "agents": ["orchestrator", "developer", "qa"]
+    },
+    {
+      "id": "escalation_report",
+      "name": "escalation_report",
+      "path": "skills/escalation_report.skill.md",
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Rapport structuré d'escalade pour validation humaine",
+      "agents": ["orchestrator"]
     }
   ]
 }

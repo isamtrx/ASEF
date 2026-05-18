@@ -61,6 +61,36 @@
       "version": "1.0.0",
       "description": "Produit et maintient la documentation, G6 evidence package",
       "tools": ["read_file", "list_directory", "write_file", "escalate"]
+    },
+    {
+      "id": "reviewer",
+      "name": "Reviewer",
+      "path": "agents/REVIEWER.agent.md",
+      "implementation": null,
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Valide les changements avant merge — approbation ou refus motivé",
+      "tools": ["read_file", "list_directory", "escalate"]
+    },
+    {
+      "id": "adr_writer",
+      "name": "ADR Writer",
+      "path": "agents/ADR_WRITER.agent.md",
+      "implementation": null,
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Rédige les ADR conformes au format ASEF",
+      "tools": ["read_file", "list_directory", "write_file", "escalate"]
+    },
+    {
+      "id": "changelog_manager",
+      "name": "Changelog Manager",
+      "path": "agents/CHANGELOG_MANAGER.agent.md",
+      "implementation": null,
+      "status": "active",
+      "version": "1.0.0",
+      "description": "Maintient CHANGELOG.md à jour pour chaque livrable",
+      "tools": ["read_file", "list_directory", "write_file", "escalate"]
     }
   ]
 }
