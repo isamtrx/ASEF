@@ -45,3 +45,11 @@ reports/
 coverage/
 *.lcov
 junit.xml
+
+# Runtime data — généré à chaque exécution
+memory/task_history.jsonl
+artifacts/prompts/
+artifacts/reports/
+
+# Python egg-info
+*.egg-info/

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asef"
+version = "0.1.0"
+description = "ASEF — Agentic Software Engineering Framework (constitution + runtime)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "ASEF contributors" }]
+dependencies = [
+    "anthropic>=0.102.0,<2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.3",
+    "ruff>=0.5.0",
+    "pip-audit>=2.7",
+]
+github = [
+    "openai>=1.0",
+]
+
+[project.scripts]
+asef = "asef.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["asef*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "S"]
+ignore = ["E501"]  # line length handled by formatter
