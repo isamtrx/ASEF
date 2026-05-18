@@ -34,6 +34,51 @@
 
 ---
 
+## [2026-05-18] — Migration ASEF → ASEF 2.0 (intégration asef-runtime)
+
+**Objectif :** Intégrer les 10 améliorations structurelles de D:\asef-runtime dans D:\ASEF
+**Résultat :** Complété — 30 fichiers créés, 2 fichiers mis à jour
+
+### Actions
+- Analyse comparative D:\asef-runtime vs D:\ASEF (364 vs 335 fichiers)
+- Vérification sécurité : `_ALWAYS_CRITICAL_PATHS` déjà présent dans `asef/orchestrator.py` (aucun changement requis)
+- Création MANIFEST.md (12 garanties publiques G-01 à G-12)
+- Création VISION.md (architecture 3 couches, 11 domaines, 6 principes immuables)
+- Création `core/` (10 frameworks primitifs universels + README)
+- Création `context/` (3 fichiers : BUDGET, LOADING, PRIORITY)
+- Création `missions/` (4 sous-répertoires avec READMEs : active, completed, blocked, archived)
+- Création `playbooks/` (7 playbooks opérationnels)
+- Création `evaluations/mission_scorecard.md` (grille 20 points)
+- Création `domains/software/ASEF-QA/README.md` (4 agents QA, 2 workflows)
+
+### Décisions
+- `_ALWAYS_CRITICAL_PATHS` en avance sur asef-runtime : conservé tel quel (ASEF > asef-runtime sur ce point)
+- Architecture 3 couches (Core → Domain → Instance) adoptée comme standard ASEF
+
+### Fichiers modifiés
+- `CHANGELOG.md` — section Unreleased alimentée
+- `SESSION_LOG.md` — cette entrée
+
+### Fichiers créés (30)
+- `MANIFEST.md`, `VISION.md`
+- `core/README.md`, `core/ASEF-Core.md`, `core/ASEF-Gates.md`, `core/ASEF-Memory.md`
+- `core/ASEF-Evidence.md`, `core/ASEF-Risk.md`, `core/ASEF-HITL.md`, `core/ASEF-Workflow.md`
+- `core/ASEF-Decision.md`, `core/ASEF-AgentGov.md`, `core/ASEF-Audit.md`
+- `context/CONTEXT_BUDGET.md`, `context/CONTEXT_LOADING.md`, `context/CONTEXT_PRIORITY.md`
+- `missions/active/README.md`, `missions/completed/README.md`, `missions/blocked/README.md`, `missions/archived/README.md`
+- `playbooks/create-new-framework.md`, `playbooks/produce-evidence-package.md`
+- `playbooks/run-go-no-go.md`, `playbooks/run-maturity-assessment.md`
+- `playbooks/improve-framework.md`, `playbooks/specialize-framework.md`
+- `playbooks/use-copilot-cli-for-patch.md`
+- `evaluations/mission_scorecard.md`
+- `domains/software/ASEF-QA/README.md`
+
+### Prochaines actions
+- [ ] Créer `missions/active/2026-05-18_migration-asef-runtime.md` (archiver cette mission dans completed)
+- [ ] Lancer maturity assessment (playbooks/run-maturity-assessment.md) pour mesurer le niveau post-migration
+
+---
+
 ## [2026-05-15] — Bootstrap Sprint 0 + complétude framework
 
 **Objectif :** Compléter le bootstrap documentaire ASEF (cohérence interne, fichiers manquants, qualité)  

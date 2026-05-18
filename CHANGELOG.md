@@ -9,7 +9,40 @@
 
 ## [Unreleased]
 
-_(Aucun changement en attente de release)_
+### Added
+- `MANIFEST.md` — Contrat public des 12 garanties ASEF (G-01 à G-12)
+- `VISION.md` — Vision ASEF 2.0 : meta-framework universel, architecture 3 couches
+- `core/` — 11 fichiers primitifs universels transverses à tout framework ASEF :
+  - `ASEF-Core.md` (10 agents universels, pipeline G0-G9, règles d'extension)
+  - `ASEF-Gates.md` (gates G0-G9 avec checklists et matrice de maturité)
+  - `ASEF-Memory.md` (modèle mémoire systémique à 4 fichiers)
+  - `ASEF-Evidence.md` (taxonomie de preuves, 7 types, format evidence package)
+  - `ASEF-Risk.md` (9 catégories, scoring P×I 1-9, registre)
+  - `ASEF-HITL.md` (13 triggers HITL, format notification, comportement pipeline)
+  - `ASEF-Workflow.md` (statuts, WF-INTAKE, WF-EXECUTION)
+  - `ASEF-Decision.md` (6 types, format ADR et EXCEPTION, DecisionAgent)
+  - `ASEF-AgentGov.md` (cycle de vie, contrat agent, matrice permissions)
+  - `ASEF-Audit.md` (14 questions fondamentales, 5 types d'audit)
+  - `README.md` (index des 10 frameworks + règle d'héritage)
+- `context/` — Gestion du contexte agent :
+  - `CONTEXT_BUDGET.md` (budgets tokens par type de tâche)
+  - `CONTEXT_LOADING.md` (séquence bootstrap 7 étapes)
+  - `CONTEXT_PRIORITY.md` (ordre de priorité 10 niveaux, résolution conflits)
+- `missions/` — Structure cycle de vie des missions :
+  - `missions/active/README.md` (format, convention, règles)
+  - `missions/completed/README.md` (format archivage avec evidence)
+  - `missions/blocked/README.md` (format blocage avec gate + HITL)
+  - `missions/archived/README.md` (format annulation avec justification)
+- `playbooks/` — 7 playbooks opérationnels :
+  - `create-new-framework.md` (5 phases, cadrage → validation)
+  - `produce-evidence-package.md` (6 étapes, anti-hallucination)
+  - `run-go-no-go.md` (5 étapes, HITL, DECISIONS.md)
+  - `run-maturity-assessment.md` (5 niveaux, scoring 55 points)
+  - `improve-framework.md` (gap analysis, ADR, validation)
+  - `specialize-framework.md` (héritage ASEF-Core, domain layer)
+  - `use-copilot-cli-for-patch.md` (règles chirurgicales, validation)
+- `evaluations/mission_scorecard.md` — Grille 20 points, seuils ACCEPTED/PARTIAL/REJECTED
+- `domains/software/ASEF-QA/README.md` — Framework QA avec 4 agents et 2 workflows
 
 ---
 
