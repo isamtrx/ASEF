@@ -26,14 +26,29 @@ Demande → Cadrage → Génération → Contrôle → Tests → Sécurité → 
 ## Démarrage rapide
 
 ```bash
+# Installer le runtime Python
+pip install -e .
+
+# Lancer une tâche (dry-run)
+asef run "Décris ta tâche ici" --dry-run
+
+# Lancer une tâche (réelle, nécessite LLM_PROVIDER + LLM_API_KEY dans .env)
+asef run "Décris ta tâche ici"
+
+# Exécuter les tests
+pytest tests/ -x -q
+```
+
+**Bootstrap documentaire :**
+```bash
 # 1. Lire la constitution agents
 cat AGENTS.md
 
 # 2. Vérifier le périmètre
 cat SCOPE.md
 
-# 3. Lancer une tâche via le modèle opérationnel
-cat docs/governance/OPERATING_MODEL.md
+# 3. Séquence bootstrap 7 étapes
+cat context/CONTEXT_LOADING.md
 ```
 
 ## Structure du dépôt
@@ -50,6 +65,19 @@ ASEF/
 ├── DECISIONS.md                 # Registre décisions structurantes
 ├── CHANGELOG.md                 # Historique versions
 ├── SESSION_LOG.md               # Journal des sessions
+├── asef/                        # Package Python runtime [v0.1.2]
+│   ├── __init__.py
+│   ├── cli.py                   # Entrypoint CLI — `asef run`
+│   ├── config.py                # Config.from_env()
+│   ├── orchestrator.py          # Pipeline G0→G7
+│   ├── agents.py                # Agents & rôles
+│   ├── gates.py                 # Quality gates
+│   ├── memory.py                # Persistance mémoire
+│   ├── provider.py              # Abstraction LLM (OpenAI, Anthropic…)
+│   └── tools.py                 # ToolExecutor + is_destructive()
+├── tests/                       # 5 tests pytest (exit 0) [v0.1.2]
+├── pyproject.toml               # Config projet + dépendances
+├── .env.example                 # Template variables d'environnement
 ├── core/                        # 10 frameworks primitifs universels [v0.2]
 │   ├── ASEF-Core.md             # 10 agents universels, pipeline G0-G9
 │   ├── ASEF-Gates.md            # Gates G0-G9 avec checklists
@@ -100,6 +128,7 @@ ASEF/
 
 | Objectif | Document |
 |----------|----------|
+| Installer le runtime | [pyproject.toml](pyproject.toml) + `.env.example` |
 | Comprendre le framework | [PROJECT.md](PROJECT.md) |
 | Vision ASEF 2.0 | [VISION.md](VISION.md) |
 | 12 garanties publiques | [MANIFEST.md](MANIFEST.md) |
