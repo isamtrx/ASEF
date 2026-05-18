@@ -23,6 +23,8 @@
 
 **Toute écriture hors de cette table = délégation obligatoire (D-0004).**
 
+> **Piège fréquent (orchestrator) :** Les fichiers `.agent/rules/`, `directives/`, `README.md`, `BRIEF.md`, `skills/`, `tools/`, `playbooks/`, `policies/`, `orchestration/` sont tous des **"Documentation `.md` hors liste"**. Leur nature (gouvernance, règles, agents) ne crée pas de permission. Seule cette table crée des permissions.
+
 ---
 
 ## Ce que l'orchestrator fait vs délègue

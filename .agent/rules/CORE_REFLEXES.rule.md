@@ -35,10 +35,11 @@
 
 ## REFLEX-004 — Rôle check avant écriture
 
-**Déclencheur :** Toute écriture de fichier  
+**Déclencheur :** Toute écriture de fichier — **code ET markdown ET JSON ET YAML ET tout autre format**  
 **Action :** Vérifier `ROLE_BOUNDARIES.rule.md` — ce fichier est-il dans ma liste ?  
 **Bloque :** Écriture directe hors liste sans autorisation (D-0004)  
-**Origine :** Incident copilot-instructions.md 2026-05-18
+**Rationalisation interdite :** "C'est de la gouvernance / des règles agent / du markdown simple" ne crée pas de permission  
+**Origine :** Incident copilot-instructions.md 2026-05-18 + renames .agent/rules/ 2026-05-19
 
 ---
 
